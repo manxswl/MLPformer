@@ -1,4 +1,5 @@
 # MLPformer
-#Sorting out the code
-#coming soon
+#Sorting out the code, coming soon
+
+
 Is stacking more transformers more effective? Traditional transformer-based time series forecasting methods pursue optimal performance by incorporating multiple or stacking multiple layers of transformers in their encoder-decoder architectures. However, this "more is better" design principle deserves scrutiny. Through experimental analysis, we found that excessive transformer layers not only increase computational complexity but may also lead to performance degradation. Notably, we observed that the effectiveness of attention mechanisms is closely tied to the characteristics of different decomposed components: while bringing significant improvements in seasonal components, it may actually degrade performance when applied to trend components. Based on this finding, we propose MLPformer, a model that adopts a divide-and-conquer strategy, using MLP to model simple trend features while employing an encoder-decoder architecture that integrates convolution and attention mechanisms for complex seasonal features. This design not only avoids overly complex network structures but also effectively leverages the advantages of different components. Experiments on multiple long-term time series forecasting benchmark datasets demonstrate that our approach not only achieves state-of-the-art prediction accuracy but also offers significant computational efficiency advantages.
